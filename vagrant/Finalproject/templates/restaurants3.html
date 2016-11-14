@@ -1,0 +1,40 @@
+<html>
+
+    <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link rel=stylesheet type=text/css href="../static/styles.css"> 
+    </head>
+    <body>
+        
+        <div class="row"> 
+            <div class="col-lg-8 col-md-1 col-sm-1">
+                <a href="{{url_for('showRestaurants')}}"><span class="glyphicon glyphicon-home"></span></a>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 header">
+                    <h1> The Old Smoke </h1>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1">
+            <p class="login">Login</p>
+            </div>
+        </div>
+
+    <img src='../static/londonnight1.jpg' class= 'home_image img-responsive'>
+
+    <br>
+    <div class = "container-fluid header">
+        <a href="{{url_for('newRestaurant')}}">Add a new Restaurant <span class="glyphicon glyphicon-pencil"></span></a><br>
+
+        {%for r in Existing%}
+            <div class = "name">
+            <h2>{{r.name}}</h2>
+            </div>
+            <a href = "{{url_for('showMenu', restaurant_id = r.id)}}"><span class="glyphicon glyphicon-list-alt"></span> Menu</a>    
+            <a href="{{url_for('editRestaurant',restaurant_id = r.id)}}"><span class="glyphicon glyphicon-cog"></span> Edit</a> 
+            <a href="{{url_for('deleteRestaurant',restaurant_id = r.id)}}"><span class="glyphicon glyphicon-trash"></span> Delete</a><br>
+
+            <br>
+            {%endfor%}
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+
+    <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link rel=stylesheet type=text/css href="../static/styles.css"> 
+    </head>
+    <body>
+        <header>
+        </header>
+        <ul>
+            <li><a class="active" href=#>Home</a></li>
+            <li><a href=#>About Us</a></li>
+            <li><a href=#>News</a></li>
+            <li style="float:left"><a href=#>Contact Us</a></li>
+        </ul>
+        
+        <div class="row"> 
+            <div class="col-lg-8 col-md-1 col-sm-1">
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 header">
+                    <h1> The Old Smoke </h1>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1">
+            <p class="login">Login</p>
+            </div>
+        </div>
+
+    <br>
+    <div class = "container-fluid content">
+        <a href="{{url_for('newRestaurant')}}">Add a new Restaurant <span class="glyphicon glyphicon-pencil"></span></a><br>
+
+        {%for r in Existing%}
+            <div class = "name">
+            <h4>{{r.name}}</h4>
+            </div>
+            <a class='index' href = "{{url_for('showMenu', restaurant_id = r.id)}}"><span class="glyphicon glyphicon-list-alt"></span> Menu</a>    
+            <a class='index' href="{{url_for('editRestaurant',restaurant_id = r.id)}}"><span class="glyphicon glyphicon-cog"></span> Edit</a> 
+            <a class='index' href="{{url_for('deleteRestaurant',restaurant_id = r.id)}}"><span class="glyphicon glyphicon-trash"></span> Delete</a><br>
+
+            <br>
+            {%endfor%}
+        </div>
+        </div>
+    </body>
+</html>

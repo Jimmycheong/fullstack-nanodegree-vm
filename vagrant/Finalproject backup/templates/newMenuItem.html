@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+        <link rel=stylesheet type=text/css href="{{url_for('static',filename='styles.css')}}"> 
+    </head>    
+    <body>
+        <div class="row">
+            <div class="col-md-1">
+                <a href="{{url_for('showRestaurants')}}"><span class="glyphicon glyphicon-home"></span></a>
+            </div>
+            <div class="col-md-10">
+                <div class = "header">
+                    <h1> The Old Smoke </h1>
+                </div>
+                <div class="col-md-1">
+            </div>
+            </div>
+        </div>    
+    <h1>New Menu Item </h1>
+    
+    <form action = "{{url_for('newMenuItem', restaurant_id = restaurant_id)}}" method = 'POST'>
+    
+    <p>Name: </p>
+    <input type="text" size='30'
+    name = 'name'>
+    <p>Description: </p>    
+    <input type="text" size='30'
+    name = 'description'>
+    <p>Price: </p>
+    <input type="text" size='30'
+    name = 'price'><br>
+    <br>
+    <p>Course: </p>
+    <p><input type='radio' name ='course' checked value = 'Appetizer'>Appetizer</p>
+    <p><input type='radio' name ='course' value = 'Entree'>Entree</p>
+    <p><input type='radio' name ='course' value = 'Dessert'>Dessert</p>
+    <p><input type='radio' name ='course' value = 'Beverage'>Beverage</p><br>
+    <br>
+    <input type='submit' value='Create'>
+    </form>
+        
+    </body>
+</html>

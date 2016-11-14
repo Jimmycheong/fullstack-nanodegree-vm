@@ -1,0 +1,58 @@
+<html>
+    <body> 
+
+    <h1> {{r.name}} </h1>
+
+    <a href = "{{url_for('newMenuItem', restaurant_id = restaurant_id)}}">Create new menu item</a>
+        
+    {% if items %}
+        {%if Appes%}
+            <h2> Appetizers </h2>
+            {% for i in Appes %}
+            <p>{{i.name}}</p>    
+            <p>{{i.description}}</p>
+            <p>{{i.price}}</p>
+            <a href="{{url_for('editMenuItem',restaurant_id = restaurant_id, menu_id = i.id)}}">Edit</a><br>
+            <a href="{{url_for('deleteMenuItem',restaurant_id = restaurant_id, menu_id = i.id)}}">Delete</a><br>
+            {% endfor %}
+        {%endif%}
+    
+        {% if Entrees %}
+            <h2> Entrees </h2>
+            {% for i in Entrees %}
+            <p>{{i.name}}</p>    
+            <p>{{i.description}}</p>
+            <p>{{i.price}}</p>
+            <a href="{{url_for('editMenuItem',restaurant_id = restaurant_id, menu_id = i.id)}}">Edit</a><br>
+            <a href="{{url_for('deleteMenuItem',restaurant_id = restaurant_id, menu_id = i.id)}}">Delete</a><br>
+            {% endfor %}
+        {%endif%}
+        
+        {% if Desserts %}
+            <h2> Desserts </h2>
+            {% for i in Desserts %}
+            <p>{{i.name}}</p>    
+            <p>{{i.description}}</p>
+            <p>{{i.price}}</p>
+            <a href="{{url_for('editMenuItem',restaurant_id = restaurant_id, menu_id = i.id)}}">Edit</a><br>
+            <a href="{{url_for('deleteMenuItem',restaurant_id = restaurant_id, menu_id = i.id)}}">Delete</a><br>
+            {% endfor %}
+        {% endif%}
+        
+        {% if Bevs %}
+        <h2> Beverages </h2>
+            {% for i in Bevs %}
+            <p>{{i.name}}</p>    
+            <p>{{i.description}}</p>
+            <p>{{i.price}}</p>
+            <a href="{{url_for('editMenuItem',restaurant_id = restaurant_id, menu_id = i.id)}}">Edit</a><br>
+            <a href="{{url_for('deleteMenuItem',restaurant_id = restaurant_id, menu_id = i.id)}}">Delete</a><br>
+            {% endfor %}
+        {% endif%}
+    {% else %}
+        <p> There are currently no menu items</p>
+        <a href=#>create new menu item</a>
+    {% endif %}
+    </body>
+    
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">    
+        <link rel=stylesheet type=text/css href="{{url_for('static',filename='styles.css')}}">
+    </head>
+    <body class="Obody">
+        <div class="container-fluid">
+        <div class="row title_bar">
+            <div class="col-md-2">
+                <a href="{{url_for('showRestaurants')}}"><span class="glyphicon glyphicon-home"></span></a>
+            </div>
+            <div class="col-md-8 headers">
+                    <h1> The Old Smoke </h1>
+                <div class="col-md-2">
+            </div>
+            </div>
+        </div>
+
+    <div>
+<!--        <img src='../../static/londonview.jpg' class = "img-responsive"> --> 
+
+    <div class = "w3-card-4 w3-white w3center">
+        <div class="w3-container w3-black">
+            <h3 style="font-size:100%"> Enter New Restaurant </h3>
+        </div>    
+    <br>
+    <form action = "{{url_for('newRestaurant')}}" method = 'POST' class="w3-container">
+    
+    <input class="w3-input" type='text' size = '40%' name = 'name' placeholder="New Restaurant Name"> 
+    <br>    
+   <input class='w3-button w3-indigo w3-border' type='submit' value = 'Add'>
+        
+    </form>
+    </div>    
+        
+    </div>
+            
+    </div>
+    </body>
+</html>

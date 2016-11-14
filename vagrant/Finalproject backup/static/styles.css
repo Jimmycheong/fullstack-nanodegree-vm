@@ -1,0 +1,59 @@
+html{
+    min-height:100%;
+}
+
+.title_bar {
+    position:relative; 
+    background-color:white;
+    text-align:center;
+}
+.header{text-align: center;
+        font-family:myFirstfont;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(canterbury.ttf);
+    font-weight: bold;
+}
+
+.home_button {}
+a {font-family:fantasy}
+.glyphicon-home {
+    font-size:20px;
+    margin-top:25px;
+    margin-left:30px;
+}
+.login{
+    float:right;
+    font-family: sans-serif;
+    font-size:13px;
+    padding-right: 0px;
+    padding-top: 30px;
+}
+
+.home_image{
+    
+}
+.head_image{width: 100px; 
+            height: 60px;}
+
+.Obody{
+    background-image: url('../../static/londonview3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.style-5 input[type="text"] {
+  padding: 10px;
+  border: solid 1px #fff;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+}
+
+.newRest{
+    background-color:white;
+    margin: 40px 370px 40px 370px;
+    padding-top:10px;
+    padding-bottom:10px;
+}

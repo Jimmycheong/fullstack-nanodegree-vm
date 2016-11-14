@@ -1,0 +1,142 @@
+html{
+    min-height:100%;
+    min-width:100%;
+}
+
+.title_bar {
+    position:relative; 
+    background-color:white;
+    text-align:center;
+}
+.header{background-image:url(../static/dsc_0109.jpg);
+        background-size:cover;
+        background-color:black;
+        text-align: center;
+        height:100%;
+        width:100%;
+        min-height:100%;
+        min-width:100%;
+ 
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        color: white; 
+}
+.content{
+    text-align:center;
+}
+h1 {font-family:myFirstfont;}
+@font-face {
+    font-family: myFirstFont;
+    src: url(canterbury.ttf);
+    font-weight: bold;
+}
+
+.home_button {}
+a {font-family:fantasy}
+a.index{
+    font-size:80%;
+}
+.glyphicon-home {
+    font-size:20px;
+    margin-top:25px;
+    margin-left:30px;
+}
+.login{
+    float:right;
+    font-family: sans-serif;
+    font-size:13px;
+    padding-right: 0px;
+    padding-top: 30px;
+}
+
+.home_image{
+   margin-top:-40px;
+}
+.head_image{width: 100px; 
+            height: 60px;}
+
+.Obody{
+    background-image: url('../../static/londonview3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.back-menu{
+    background-image: url('../../static/stpauls.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    text-align: center;
+}
+
+.back-items{
+    background-color:white;
+    margin-left:15px;
+    width:200px;
+    
+}
+
+.style-5 input[type="text"] {
+  padding: 10px;
+  border: solid 1px #fff;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+}
+
+.newRest{
+    margin: 40px 340px 40px 340px;
+    padding-top:0px;
+    padding-bottom:2px;
+}
+
+w3-input{
+    font-size:10%;
+}
+
+.w3center {
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    width: 20%;
+    text-align: center;
+    font-size: 11px;
+
+}
+
+.lan {
+    text-decoration:none;
+    color:white;
+}
+.lan:hover{
+    text-decoration: none;
+}
+
+/*NAV BAR STYLES*/
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    background-color: #333;
+    overflow:hidden;
+    }
+        li{
+            float:left;
+        }
+        li a{
+            display:block;
+            color:#EEE;
+            padding: 8px 22px;
+            background-color:#333;
+            text-decoration: none;
+            text-align:center;
+        }
+        li:last-child {
+            border-bottom:none;
+        }
+        li a:hover{
+            background-color:#888; 
+            color: white;
